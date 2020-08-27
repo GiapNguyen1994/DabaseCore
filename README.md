@@ -48,7 +48,7 @@ This guide shows how to use Module DataBase in ViettelPay App
 ```
 
 - Using room database
-Room database in DabaseCore store ```Listservice, Contact and UserInfo``` . Feature module only call funtions which are defined on DatabaseCore and don't have permision to edit 
+Room database in DabaseCore using to store ```Listservice, Contact and UserInfo``` . Feature module only call funtions which are defined on DatabaseCore and don't have permision to edit 
 Feature module should create database for each module
 1. In Order to create Room database in feature module, add key to encrypt room
 ```java
