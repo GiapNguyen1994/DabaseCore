@@ -38,3 +38,8 @@ This guide shows how to use Module DataBase in ViettelPay App
         KPreferences.KEY.getLongNotEncrypt(defaultValue)
         KPreferences.KEY.putBooleanNotEncrypt(defaultValue)
         KPreferences.KEY.getBooleanNotEncrypt(defaultValue)
+        
+```
+- Using room database
+1. Room database in DabaseCore store ```Listservice, Contact and UserInfo```
+
