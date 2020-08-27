@@ -63,13 +63,19 @@ KEY: key of each module to encrypt room
 2. Get Contact
 ```java
         val contactFetcher: ContactFetcher by inject()
-         contactFetcher.addCallback(contacts ->
-            );
-          contactFetcher.fetch(this, false);
-          contactFetcher.removeCallback(calBack);
+        contactFetcher.addCallback(contacts -> todo() );
+        contactFetcher.fetch(this, false);
+        contactFetcher.removeCallback(calBack);
 ```
 
-3. 
+3. Get, save, delete UserInfo
+```java 
+        val serInfoController: UserInfoController by inject()
+        serInfoController.getUserInfo()
+        serInfoController.saveUserInfo()
+        serInfoController.deleteUserInfo()
+```
+
 
 
 
