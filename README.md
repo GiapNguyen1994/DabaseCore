@@ -11,3 +11,5 @@ This guide shows how to use Module DataBase in ViettelPay App
 ```java
         KPreferences.init(this, R.string.app_name.getString(this))
         KeyStoreController.init(this)
+ ```
+- And add ```databaseModule and repositoryModule``` for initiating Koin
