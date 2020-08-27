@@ -76,7 +76,14 @@ KEY: key of each module to encrypt room
         serInfoController.deleteUserInfo()
 ```
 
+4. Get, save, delete ListService
+    + Using ListServiceRepository with: 
 
-
+```java 
+       suspend fun insertAllService(allService: AllService)
+       fun getAllService(): List<AllService>
+       suspend fun insertServicePayment(servicePayment: ServicePayment)
+       fun getServicePayment(): List<ServicePayment>
+```
 
 
