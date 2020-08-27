@@ -40,6 +40,37 @@ This guide shows how to use Module DataBase in ViettelPay App
         KPreferences.KEY.getBooleanNotEncrypt(defaultValue)
         
 ```
+- Using Keystore 
+```java 
+        KeyStoreController.KEY.encryptByKeyStore(value)
+        KeyStoreController.KEY.decryptByKeyStore()
+        KeyStoreController.KEY.removeKey()
+```
+
 - Using room database
-1. Room database in DabaseCore store ```Listservice, Contact and UserInfo```
+Room database in DabaseCore store ```Listservice, Contact and UserInfo``` . Feature module only call funtions which are defined on DatabaseCore and don't have permision to edit 
+Feature module should create database for each module
+1. In Order to create Room database in feature module, add key to encrypt room
+```java
+        fun provideSupportFactory(): SupportFactory {
+          val dbKey = RoomKeyMgr.getInstance().getCharKey(KEY)
+          val passphrase = SQLiteDatabase.getBytes(dbKey)
+          return SupportFactory(passphrase)
+        }
+
+KEY: key of each module to encrypt room
+```
+2. Get Contact
+```java
+        val contactFetcher: ContactFetcher by inject()
+         contactFetcher.addCallback(contacts ->
+            );
+          contactFetcher.fetch(this, false);
+          contactFetcher.removeCallback(calBack);
+```
+
+3. 
+
+
+
 
